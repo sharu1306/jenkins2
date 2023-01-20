@@ -9,13 +9,20 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing is happening...'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying is happening.....'
             }
+         
+        }
+       
+    }
+    post{
+        always{
+        emailext body: 'Summary', replyTo: 'sharat.g.13@gmail.com', subject: 'Jenkins Pipeline', to: 'sharat.g.13@gmail.com'
         }
     }
 }
