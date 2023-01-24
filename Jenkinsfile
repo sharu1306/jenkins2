@@ -22,7 +22,7 @@ pipeline {
     }
     post{
         always{
-        emailext body: 'Summary', replyTo: 'sharat.g.13@gmail.com', subject: 'Jenkins Pipeline', to: 'sharat.g.13@gmail.com'
+       emailext body: 'hello', subject: 'wish', to: 'sharat.g.13@gmail.com'
         }
     }
 }
